@@ -93,15 +93,13 @@ var app = new Vue({
     headers: {
     'Access-Control-Allow-Origin': '*',
     'Content-Type': 'application/json',
+    'Authorization':'Basic YWx4OjEyMw=='
     },
     crossDomain: true, 
     withCredentials: true,
-    auth:{
-      username: 'alx',
-      password: '123'
-    }
+    
   });
-  
+  const proxy = "https://cors-anywhere.herokuapp.com/"; // new line
 
   var testApi = new Vue({
     el:'#testApi',
