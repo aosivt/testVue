@@ -88,15 +88,19 @@ var app = new Vue({
       }
     }
   })
-
+  // 'Authorization':'Basic YWx4OjEyMw=='
   const client = axios.create({
     headers: {
-    'Access-Control-Allow-Origin': '*',
+    
     'Content-Type': 'application/json',
-    'Authorization':'Basic YWx4OjEyMw=='
+    
     },
-    crossDomain: true, 
-    withCredentials: true,
+    auth:{
+      username: 'alx',
+      password: '123'
+    }
+    // crossDomain: true, 
+    // withCredentials: true,
     
   });
   const proxy = "https://cors-anywhere.herokuapp.com/"; // new line
@@ -107,9 +111,10 @@ var app = new Vue({
       info:'{}',
     },
     created: function(){
-      client.get('http://api.domstor.ru/rt/all.json').then(responce=> {this.info = responce.data})
+      client.get("https://cors-anywhere.herokuapp.com/"+'http://api.domstor.ru/rt/all.json').then(responce=> {this.info = responce.data})
           .catch(function (error){
             console.log('Error on Authentication');
           });
        }
   })
+
