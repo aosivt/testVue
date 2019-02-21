@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="lib/css/robo-icons.css" rel="stylesheet">
+  <link href="lib/css/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-content>
+        <v-container>Hello world</v-container>
+      </v-content>
+    
+    <v-layout>
+            <v-flex xs12 sm8 offset-sm2>
+              <v-card>
+                 <v-img
+                  src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+                  aspect-ratio="2.75"></v-img>
+         
+                <v-card-title primary-title>
+                  <div>
+                    <h3 class="headline mb-0">Kangaroo Valley Safari</h3>
+                    <div> {{ card_text }} </div>
+                  </div>
+                </v-card-title>
+        
+                <v-card-actions>
+                  <v-btn flat color="orange">Share</v-btn>
+                  <v-btn flat color="orange">Explore</v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-flex>
+    </v-layout>
+    </v-app>
+  </div>
+
+  <script src="lib/js/vue/vue-dev.js"></script>
+  <script src="lib/js/vue/vuetify.js"></script>
+  <script>
+    var app = new Vue({ el: '#app' ,
+    data:{
+        card_text: 'Lorem ipsum dolor sit amet, brute iriure accusata ne mea. Eos suavitate referrentur ad, te duo agam libris qualisque, utroque quaestio accommodare no qui. Et percipit laboramus usu, no invidunt verterem nominati mel. Dolorem ancillae an mei, ut putant invenire splendide mel, ea nec propriae adipisci. Ignota salutandi accusamus in sed, et per malis fuisset, qui id ludus appareat.'
+    }
+    
+    })
+    
+  </script>
+</body>
+</html>
